@@ -139,3 +139,31 @@ print(someString)
  String : 문자열 타입. 유니코드 사용. 큰따옴표"" 사용
  */
 
+// 05. Any, AnyObject, nil ---------------------------------------------------------------------------------------------------
+
+import Swift
+
+/*
+ Any - Swift의 모든 타입을 지칭하는 키워드
+ AnyObject - 모든 클래스 타입을 지칭하는 프로토콜
+ nil -없음을 의미하는 키워드
+ */
+
+//MARK: - Any
+var someAny: Any = 100
+someAny  = "어떤 타입도 수용 가능"
+someAny = 123.12
+
+//let somedouble : Double = someAny 오류 발생! 값으로 다른 타입이 들어가는 것은 안됨
+
+//MARK: - AnyObject
+
+class SomeClass {}
+
+var someAnyObject: AnyObject = SomeClass()
+
+// someAnyObject = 123.12 오류 발생!
+
+
+//MARK: - nil
+// someAny = nil 오류 발생! someAny는 Any 타입으로 선언했기 때문에 Swift의 모든 타입의 값이 들어올 수 있지만 빈 값은 들어올 수가 없다
