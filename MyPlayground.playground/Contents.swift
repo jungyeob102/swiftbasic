@@ -1,6 +1,6 @@
 
 /*
-강좌02. 명명법/콘솔로그/문자열 보간법
+강좌02. 명명법/콘솔로그/문자열 보간법--------------------------------------------------------------------------------------------------
  콘솔로그
 print 단순 문자열 출력
 dump  인스턴스의 자세한 설명(description 프로퍼티)까지 출력
@@ -34,7 +34,7 @@ print(jungyeob)
 
 dump(jungyeob)
 
-// 03. 상수와 변수
+// 03. 상수와 변수---------------------------------------------------------------------------------------------------------------
 
 import Swift
 
@@ -82,5 +82,60 @@ nickname = "yeobLEE"
  
  상수는 차후에 값을 변경할 수 없다. 그러나 변수는 차후에 값을 변경할 수 있다.
  MYTHINK - 따라서 언제나 고정된 값을 가지는 것은 상수로, 변할 가능성이 있으면 변수로 선언하는 것이 좋을 것이다.
+ */
+
+// 04. 기본 데이터 타입-----------------------------------------------------------------------------------------------------------
+ 
+import UIKit
+
+// Swift의 기본 데이터 타입
+// Bool, Int, UInt, Float, Double, Character, String
+
+// Bool
+var someBool : Bool = true
+someBool = false
+
+// Int
+var someInt : Int = -100
+//someInt = 100.1 오류발생!
+
+// UInt
+var someUInt : UInt = 100
+//someUInt = -100 오류발생!
+
+//Float
+var someFloat : Float = 3.14
+someFloat = 3
+
+// Double
+var someDouble: Double = 3.14
+someDouble = 3
+
+// Character
+var someCharacter: Character = "가"
+// someCharacter = "가가가" 오류발생! 문자가 하나가 아닌 여러개가 들어가면 캐릭터타입이 아닌 문자열 타입으로 보기 때문
+print(someCharacter)
+
+// String
+var someString: String = "하하하"
+someString = someString + " 웃으면 복이와요"
+print(someString)
+
+/*
+ 정리
+ 
+ Bool = true false 만을 값으로 가지는 타입
+ 
+ Int, UInt
+ Int = 정수 타입. 현재는 기본적으로 64비트 정수형
+ UInt= 양의 정수 타입. 현재는 기본적으로 64비트 양의 정수형
+ 
+ Float, Double
+ Float = 실수 타입. 32비트 부동소수형
+ Double = 실수 타입. 64비트 부동소수형
+ 
+ Character, String
+ Character : 문자 타입(문자 하나). 유니코드 사용. 큰따옴표"" 사용
+ String : 문자열 타입. 유니코드 사용. 큰따옴표"" 사용
  */
 
