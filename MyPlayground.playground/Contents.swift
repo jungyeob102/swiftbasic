@@ -74,10 +74,10 @@ nickname = "jungyeob"
 nickname = "yeobLEE"
 
 /* 정리 =
- 상수 선언 키워드 = var
+ 변수 선언 키워드 = var
  var 이름 : 타입 = 값
  
- 변수 선언 키워드 = let
+ 상수 선언 키워드 = let
  let 이름 : 타입 = 값
  
  상수는 차후에 값을 변경할 수 없다. 그러나 변수는 차후에 값을 변경할 수 있다.
