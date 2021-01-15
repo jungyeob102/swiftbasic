@@ -167,3 +167,88 @@ var someAnyObject: AnyObject = SomeClass()
 
 //MARK: - nil
 // someAny = nil 오류 발생! someAny는 Any 타입으로 선언했기 때문에 Swift의 모든 타입의 값이 들어올 수 있지만 빈 값은 들어올 수가 없다
+
+// 06. 컬렉션 타입(Array, Dictionary, Set)---------------------------------------------------------------------------------------
+
+/*
+ 컬렉션 타입
+ Array, Dictionary, Set
+ */
+
+/*
+ Array - 순서가 있는 리스트 컬렉션
+ Dictionary - 키와 값의 쌍으로 이루어진 컬렉션
+ Set - 순서가 없고, 멤버가 유일한 컬렉션
+ */
+
+//MARK: - Array
+
+// 빈 Int Array 생성
+var integers: Array<Int> = Array<Int>()
+integers.append(1)
+integers.append(100)
+
+print(integers)
+
+integers.contains(100) //포함하고 있기 때문에 true
+integers.contains(88)  //포함하고 있지 않기 때문에 false
+
+//요소 지우기
+integers.remove(at: 0) //0번째 있던 인덱스인 1을 삭제
+integers.removeLast()  //마지막 인덱스인 100을 삭제
+integers.removeAll()   //모든 인덱스 삭제
+
+integers.count // 인덱스 갯수 확인
+
+// Array<Double> 와 [Double]은 동일한 표현이다
+// 빈 String Array 생성
+var strings: [String] = [String]()
+// 빈 Character Array 생성
+// []은 새로운  빈 Array 생성
+var characters: [Character] = []
+
+// let을 사용하여 Array를 선언하면 불변 Array
+let immutableArray = [1,2,3]
+//따라서 immutableArray.append(4) 나 immutableArray.removeAll()같은 변경사항을 주는 요인은 사용하지 못한다.
+
+//MARK: = Dictionary
+// Key가 String 타입이고 Value(값)이 Any인 빈 Dictionary 생성
+var anyDictionary: Dictionary<String, Any> = [String: Any]()
+anyDictionary["someKey"] = "value"
+anyDictionary["anotherKey"] = 100
+
+anyDictionary
+
+anyDictionary.removeValue(forKey: "anotherKey")
+
+anyDictionary
+
+anyDictionary["someKey"] = nil //somekey를 nil로 값을 지정하는 것은 삭제와 그 의미가 비슷하다
+
+anyDictionary
+
+let emptyDictionary: [String: String] = [:]
+
+//MARK: - Set
+// 빈 Int Set 생성
+var integerSet: Set<Int> = Set<Int>()
+integerSet.insert(1)
+integerSet.insert(100)
+integerSet.insert(100)
+integerSet // Set는 중복된 값은 없다
+
+let setA: Set<Int> = [1,2,3,4,5]
+let setB: Set<Int> = [3,4,5,6,7]
+
+let union: Set<Int> = setA.union(setB) //union을 통해 합집합 구하기
+let sortedUnion: [Int] = union.sorted() //sorted를 통해 배열 정리
+let intersection: Set<Int> = setA.intersection(setB) //intersection 교집합
+let subtracting: Set<Int> = setA.subtracting(setB) //subtracting 차집합
+
+/*
+ 추가 정리
+ append - 추가
+ contains - 값을 포함하고 있는지 확인
+ remove - 삭제
+ count - 인덱스 갯수 확인
+ */
