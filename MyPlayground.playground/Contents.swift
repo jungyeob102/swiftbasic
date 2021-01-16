@@ -477,3 +477,24 @@ while abc.count > 1 {
 repeat {
     abc.removeLast()
 } while abc.count > 0
+
+//MARK: 11강 옵셔널-------------------------------------------------------------------------------------------------------------
+/*
+ 옵셔널 optional.  '?','!'
+ 값이 있을 수도 있고 없을 수도 있다.는 뜻
+
+ nil의 가능성을 명시적으로 표현
+ */
+
+//nil이 가능한 경우 타입 뒤에 '?' 추가
+func somefunction(someOptionalParam: Int?){
+}
+somefunction(someOptionalParam: nil)
+
+//nil이 불가능한 경우
+func somefunction(someParam: Int) {
+}
+// somefunction(someParam: nil)  오류발생!
+
+//암시적 추출 옵셔널 '!'
+
