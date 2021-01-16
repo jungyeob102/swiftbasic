@@ -432,3 +432,48 @@ default:
     print("unknown")
 }
 
+//MARK: 10. 반복문-------------------------------------------------------------------------------------------------------------
+
+var abc = [1,2,3]
+let people = ["jungyeob" : 10, "eric" : 15, "mike" : 12]
+
+//MARK: - for-in
+
+/*
+ for item in items{
+    code
+ }
+ */
+
+for integer in abc {
+    print(integer)
+}
+
+//Dictionary의 item은 key와 value로 구성된 튜플 타입입니다.
+for (name, age) in people {
+    print("\(name): \(age)")
+}
+
+//MARK: - whille
+
+/*
+ while (condition) {    << ()는 선택사항, 안써줘도됨
+    code
+ */
+
+while abc.count > 1 {
+    abc.removeLast()
+}
+
+
+//MARK: - repeat-while
+
+/*
+ repeat {
+    code
+ } while condition
+ */
+
+repeat {
+    abc.removeLast()
+} while abc.count > 0
