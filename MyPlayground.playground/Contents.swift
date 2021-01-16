@@ -252,3 +252,68 @@ let subtracting: Set<Int> = setA.subtracting(setB) //subtracting 차집합
  remove - 삭제
  count - 인덱스 갯수 확인
  */
+
+// 07. 함수 기본----------------------------------------------------------------------------------------------------------------
+
+//MARK: - 함수의 선언
+
+//MARK: 함수 선언의 기본형태
+//func 함수이름(매개변수1이름: 매개변수1타입, 매개변수2이름: 매개변수2타입 ...) -> 반환타입 {
+//   함수 구현부
+//   return 반환값
+//}
+
+//ex
+func sum(a: Int, b: Int) -> Int{
+    return a + b
+}
+
+//MARK: 반환 값이 없는 함수
+//func 함수이름(매개변수1이르미 매개변수1타입, 매개변수2이름: 매개변수2타입 ...) -> Void {     << Void 생략도 가능
+//   함수 구현부
+//   return
+//}
+
+//ex
+func printMyName(name: String) -> Void {
+    print(name)
+}
+
+//MARK: 매개변수가 없는 함수
+//func 함수이름() -> 반환타입 {
+//   함수 구현부
+//   return 반환값
+//}
+
+//MARK: 매개변수와 반환값이 없는 함수
+//func 함수이름() -> Void {       << Void 생략 가능
+//   함수 구현부
+//   return
+//}
+
+func bye() {print("bye")}
+
+bye()
+
+//MARK: - 함수의 호출
+
+sum(a: 3, b: 5)
+printMyName(name: "jungyeob")
+
+
+/*
+ 정리
+ 함수선언의 기본형태
+ func 함수이름(매개변수1이름: 매개변수1타입, 매개변수2이름: 매개변수2타입 ...) -> 반환타입{
+     함수 구현부
+     return 반환값
+ }
+ */
+
+//ex
+func multiplication(a: Int, b: Int) -> Int{
+    return a * b
+}
+
+multiplication(a: 5, b: 10)
+
