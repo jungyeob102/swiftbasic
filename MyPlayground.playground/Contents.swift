@@ -551,3 +551,25 @@ let immutable : Sample = Sample()
 Sample.typeProperty = 300
 Sample.typeMethod() // type method
 
+//MARK: 14강 클래스-------------------------------------------------------------------------------------------------------------
+
+//MARK: - 정의
+
+//class 이름{
+//  구현부(프로퍼티, 메서드)
+//}
+
+//MARK: - 프로퍼티 및 메서드
+
+//타입 메서드
+//재정의 불가 타입 메서드 - static
+// static func typeMethod() {
+//    print("typee method - static")
+//}
+
+//재정의 가능 타입 메서드 - class
+//class func classMethod() {
+//    print("type method - class")
+//}
+
+//MARK: 클래스 사용
