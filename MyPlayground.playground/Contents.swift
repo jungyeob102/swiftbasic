@@ -504,3 +504,50 @@ func somefunction(someParam: Int) {
 //MARK: 옵셔널 바인딩 - nil 체크 + 안전한 값 추출
 
 //MARK: 옵셔널 강제추출 - 옵셔널의 값을 강제로 추출
+
+//MARK: 13강 구조체-------------------------------------------------------------------------------------------------------------
+
+//MARK: - 정의
+
+//struct 이름 {
+//  구현부
+//}
+
+//MARK: 프로퍼티(인스턴스 변수) 및 메서드(구조체 안에 들어있는 함수)
+
+struct Sample {
+    var mutableProperty: Int = 100 //가변 프로퍼티
+    let immutableProperty: Int = 100 //불변 프로퍼티
+
+    static  var typeProperty: Int = 100 //타입 프로퍼티
+
+//인스턴스 메서드
+    func instanceMethod()  {
+        print("instance method")
+    }
+
+//타입 메서드
+    static func typeMethod() {
+        print("type method")
+    }
+}
+
+//MARK: 구조체 사용
+
+//가변 인스턴스
+var mutable: Sample = Sample()
+
+mutable.mutableProperty = 200
+// mutable.immutableProperty = 200  오류발생! why? 520.에서 이미 let 으로 불변 프로퍼티로 선언했기 때문이다.
+
+//불변 인스턴스
+let immutable : Sample = Sample()
+
+//immutable.mutableProperty = 200  오류발생! why? 불변 인스턴스로 선언했기 때문에 아무리 가변 프로퍼티라 하더라도 값을 바꿀 수 없다.
+//immutable.immutableProperty = 200
+
+//타입 프로퍼티 및 메서드
+
+Sample.typeProperty = 300
+Sample.typeMethod() // type method
+
