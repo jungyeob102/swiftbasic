@@ -47,3 +47,4 @@ print("\(name)의 평균은 \(average)점 입니다")
 
 
 
+//
