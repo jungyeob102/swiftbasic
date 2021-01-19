@@ -717,5 +717,7 @@ print(sumResult)
 
 //MARK: - 함수의 전달인자로서의 클로저
 
+//MARK: 18강 클로저 고급
+
 
 
