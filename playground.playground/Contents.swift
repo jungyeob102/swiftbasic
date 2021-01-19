@@ -42,7 +42,7 @@ print("\(name)의 평균은 \(average)점 입니다")
  힌트 : 키보드 입력은 readLine()
  */
 
-
+으띠
 
 
 
