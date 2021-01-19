@@ -14,6 +14,8 @@ var total = price * num
 var pay = origin * num
 
 var profit = total - pay
+print(profit)
+
 
 //MARK: 문제 2번
 /* 홍길동의 4과목 성적이 국어 89점, 수학 98점, 영어 87점, 과학 88점이다.
@@ -22,14 +24,14 @@ var profit = total - pay
  홍길동의 평균은 00.0점입니다.
  */
 
-var korean : Double = 89
-var math : Double = 98
-var english : Double = 87
-var science : Double = 88
+var korean  = 89
+var math  = 98
+var english  = 87
+var science  = 88
 
 var name = "홍길동"
 
-var average : Double = (korean + math + english + science) / 4
+var average = Double(korean + math + english + science) / 4
 
 print("\(name)의 평균은 \(average)점 입니다")
 
