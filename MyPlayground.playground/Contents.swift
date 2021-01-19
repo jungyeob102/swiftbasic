@@ -682,3 +682,40 @@ class ReferenceType {
     var property = 1
     
 }
+
+//MARK: - 17강 클로저 기본-------------------------------------------------------------------------------------------------------
+
+//코드의 블럭
+//일급 시민
+//변수,상수 등으로 저장, 전달인자로 전달이 가능
+//함수 : 이름이 있는 클로저
+
+//MARK: - 정의
+
+//{ {매개변수 목록) -> 반환타입 in
+//  실행코드
+//}
+
+//함수를 사용한 경우
+func sumFucntion(a : Int, b: Int) -> Int {
+        return a + b
+}
+
+var sumResult: Int = sumFucntion(a: 1, b: 2)
+
+print(sumResult)
+
+//클로저의 사용
+
+var som: (Int, Int) -> Int = { (a: Int, b:Int) -> Int in
+        return a + b
+}
+
+sumResult = som(1,2)
+print(sumResult)
+
+
+//MARK: - 함수의 전달인자로서의 클로저
+
+
+
