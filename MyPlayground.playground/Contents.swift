@@ -719,5 +719,58 @@ print(sumResult)
 
 //MARK: 18강 클로저 고급
 
-    .....
+
+//MARK: 19강 프로퍼티
+
+/*
+ 저장 프로퍼티
+ 연산 프로퍼티
+ 인스턴스 프로퍼티
+ 타입 프로퍼티
+ */
+
+//프로퍼티는 구조체, 클래스, 열거형 내부에 구현할 수 있다
+//다만 열거형 내부에는 연산 프로퍼티만 구현할 수 있다.
+//연산 프로퍼티는 var로만 선언할 수 있다.
+
+//MARK: - 정의
+
+    //인스턴스 연산 프로퍼티
+    // 타입 저장 프로퍼티
+    //인스턴스 메서드
+
+
+struct Money{
+    var currencyRate : Double = 1100 {
+        willSet(newRate){
+            print("환율이 \(currencyRate)에서 \(newRate)로 변경될 예정입니다")
+        }
+        didSet(oldRate){
+            print("환율이 \(oldRate)에서 \(currencyRate)으로 변경되었습니다")
+        }
+    }
+    
+    var dollar:Double = 0 {
+        willSet{
+            print("\(dollar)달러에서 \(newValue)달러로 변경될 예정입니다")
+        }
+        didSet{
+            print("\(oldValue)달러에서 \(dollar)달러로 변경되었습니다")
+        }
+    }
+    
+    var won : Double {
+        get {
+            return dollar * currencyRate
+        }
+        set {
+            dollar = newValue / currencyRate
+        }
+    }
+}
+
+var moneyInMyPocket: Money = Money()
+
+moneyInMyPocket.dollar = 1
+print(moneyInMyPocket.won)
 
