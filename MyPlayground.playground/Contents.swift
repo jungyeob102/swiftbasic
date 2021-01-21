@@ -774,3 +774,62 @@ var moneyInMyPocket: Money = Money()
 moneyInMyPocket.dollar = 1
 print(moneyInMyPocket.won)
 
+//MARK: - 20강 상속
+
+//기반 클래스 Person
+
+class Personv {
+    var name : String = ""
+    
+    func selfintroduce(){
+        print("저는 \(name)입니다")
+    }
+    
+    //final 키워드를 사용하여 재정의를 방지
+    final func sayHelllo(){
+        print("hello")
+    }
+    
+    //타입 메서드
+    //재정의 불가 타입 메서드 - static
+    static func typeMethod(){
+        print("type method - static")
+    }
+    
+    //재정의 가능 타입 메서드 - class
+    class func classMethod() {
+        print("type method - class")
+    }
+    
+    //재정의 가능한 class 메서드라도
+    //final 키워드를 사용하면 재정의 할 수 없다
+    //메서드 앞의 'static'과 'final class'는 똑같은 역할을 한다
+    final  class    func finalClassMethod(){
+        print("~~~")
+    }
+}
+
+
+//Personv을 상속받는 Student
+class Student : Personv {
+    var major : String = ""
+    
+    //override를 통해 재정의
+    override func selfintroduce() {
+        print("저는 \(name)이고, 전공은 \(major)입니다")
+    }
+    
+    //override를 통해 부모 클래스의 메서드를 재정의
+    override class func classMethod() {
+        print("overriden type method - class")
+    }
+}
+
+let jungyeob1 : Personv = Personv()
+let siyoung : Student = Student()
+
+jungyeob1.name = "중엽"
+siyoung.name = "시영"
+siyoung.major = "사법학과"
+
+siyoung.selfintroduce()
