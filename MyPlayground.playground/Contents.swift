@@ -833,3 +833,56 @@ siyoung.name = "시영"
 siyoung.major = "사법학과"
 
 siyoung.selfintroduce()
+
+var someany : Any = 100
+someany = "이중엽"
+someany = 3.14
+
+class SomemClass{}
+var someAnyObjects : AnyObject = SomemClass()
+
+//MARK: -22강 인스턴스 생성/소멸
+
+//MARK: - 이니셜라이저
+
+//프로퍼티 기본값을 지정하기 어려운 경우에는
+//이니셜라이저를 통해
+//인스턴스가 가져야 할 초기값을 전달할 수 있습니다
+
+class PersonB {
+    var name : String
+    var age : Int
+    var nickName : String
+    
+    init(name: String, age : Int, nickName : String) {
+        self.name = name
+        self.age = age
+        self.nickName = nickName
+    }
+}
+
+//MARK: 프로퍼티의 초기값이 필요 없을 때
+//옵셔널을 사용!
+
+class PersonC {
+    var name : String
+    var age : Int
+    var nickName : String?
+    
+    /*
+ init(name : String, age : Int, nickName : String) {
+        self.name = name
+        self.age  = age
+        self.nickName  =  nickName
+    }
+ */ //자신의 이니셜라이즈를 호출해 줄때는 convenience init 사용하기
+    convenience  init(name: String, age : Int, nickName : String){
+        self.init  (name: name,  age: age)
+        self.nickName = nickName
+    }
+    
+    init(name : String, age : Int) {
+        self.name = name
+        self.age = age
+    }
+}
