@@ -10,3 +10,4 @@ import Foundation
 print("Hello, World!")
 
 var name = "이중엽"
+print(name)
