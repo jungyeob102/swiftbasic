@@ -14,3 +14,4 @@ print("Hello, World!")
 var a = readLine()!.split(separator: " ")
 
 print(a)
+asdkgjalsdg
