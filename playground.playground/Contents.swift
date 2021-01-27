@@ -42,11 +42,38 @@ print("\(name)의 평균은 \(average)점 입니다")
  힌트 : 키보드 입력은 readLine()
  */
 
-으띠
+let a = 1
+let b = 2
+let c = 3
+
+var plus = (a + b + c)
+var averageABC : Double = Double((a + b + c)/3)
+
+
+print(plus)
+print(averageABC)
 
 
 
+var ten:Array<Int> = Array<Int>()
+
+ten.append(38)
+ten.append(97)
+ten.append(25)
+ten.append(66)
+ten.append(90)
+ten.append(31)
+ten.append(16)
+ten.append(86)
+ten.append(33)
+ten.append(59)
+
+print(ten)
+
+var hero : [Int : String] =
 
 
 
-//
+let input = readLine()!
+
+
