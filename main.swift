@@ -7,10 +7,14 @@
 
 import Foundation
 
-//백준 10718
+//백준 10869
 
-let multiply =  readLine()!.split(separator: " ").map{(A : Substring) -> Int in
-    return Int(A)!
+let Q =  readLine()!.split(separator: " ").map{(A : Substring) -> UInt in
+    return UInt(A)!
 }
 
-print(multiply[0]*multiply[1])
+print(Q[0] + Q[1])
+print(Q[0] - Q[1])
+print(Q[0] * Q[1])
+print(Q[0] / Q[1])
+print(Q[0] % Q[1])
