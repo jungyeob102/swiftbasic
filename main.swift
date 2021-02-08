@@ -7,10 +7,9 @@
 
 import Foundation
 
-//백준 1000번
+//백준 1001번
 //readLine() 함수는 String? 값으로 입력값을 주기 때문에, 강제언래핑
-let line = readLine()
-let sum = line!.split(separator: " ").map{(A : Substring) -> Int in
+let minus = readLine()!.split(separator: " ").map{(A : Substring) -> Int in
     return Int(A)!
 }
-print(sum[0]+sum[1])
+print(minus[0] - minus [1])
