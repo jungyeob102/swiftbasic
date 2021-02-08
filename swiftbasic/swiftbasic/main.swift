@@ -7,11 +7,9 @@
 
 import Foundation
 
-print("Hello, World!")
-
-var name = "이중엽"
-print(name)
-print("제발 이제 되었으면!!!!")
-print("됐냐? 제발...")
-//2021.01.28 04:43분 해결
-print("만세")
+//readLine() 함수는 String? 값으로 입력값을 주기 때문에, 강제언래핑
+let line = readLine()
+let sum = line!.split(separator: " ").map{(A : Substring) -> Int in
+    return Int(A)!
+}
+print(sum[0]+sum[1])
